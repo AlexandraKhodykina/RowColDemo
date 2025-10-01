@@ -38,6 +38,14 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun MainScreen(modifier: Modifier = Modifier) {
+    // Расстояние между элементами макета, ещё существуют Arrangement.SpaceBetween  и Arrangement.SpaceAround
+    Row(horizontalArrangement = Arrangement.SpaceEvenly,
+        modifier = modifier.width(1000.dp)) {
+        TextCell("1")
+        TextCell("2")
+        TextCell("3")
+    }
+}
     //Выравнивание макета
     //Row(verticalAlignment = Alignment.CenterVertically,
      //   modifier = modifier.size(width = 400.dp, height = 200.dp)) {
@@ -58,15 +66,16 @@ fun MainScreen(modifier: Modifier = Modifier) {
 //        TextCell("2")
 //        TextCell("3")
 //    }
-    Column(verticalArrangement = Arrangement.Bottom,
-        modifier = modifier.height(400.dp)) {
-        TextCell("1")
-        TextCell("2")
-        TextCell("3")
-    }
+//    Column(verticalArrangement = Arrangement.Bottom,
+//        modifier = modifier.height(400.dp)) {
+//        TextCell("1")
+//        TextCell("2")
+//        TextCell("3")
+//    }
+//
+//}
 
-}
-@Composable
+    @Composable
 fun TextCell(text: String, modifier: Modifier = Modifier) {
 
     val cellModifier = modifier
